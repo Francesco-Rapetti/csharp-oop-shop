@@ -36,6 +36,11 @@ namespace csharp_oop_shop
         {
             this.code = Random.Shared.Next(1, 100000000);
         }
+
+        public double getFullPrice()
+        {
+            return this.price * (1 + (double)this.iva / 100);
+        }
     }
 
     public enum Iva
