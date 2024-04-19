@@ -29,12 +29,22 @@ namespace csharp_oop_shop
         {
             Prodotto pane = new Prodotto("pane", "alimento contenente glutine", 0.5, Iva.RIDOTTA_4);
             Prodotto iPhone = new Prodotto("iPhone", "smartphone", 1000, Iva.ORDINARIA);
+            Prodotto shampoo = new Prodotto("shampoo", "oggetto per la cura personale", 1.5, Iva.ORDINARIA);
+
             Console.WriteLine(Prettifier("get full name"));
             Console.WriteLine(pane.getExtendedName());
             Console.WriteLine(iPhone.getExtendedName());
+            Console.WriteLine(shampoo.getExtendedName());
+
             Console.WriteLine(Prettifier("get full price"));
             Console.WriteLine(pane.getFullPrice());
             Console.WriteLine(iPhone.getFullPrice());
+            Console.WriteLine(shampoo.getFullPrice());
+
+            Console.WriteLine(Prettifier("code formatter"));
+            Console.WriteLine(pane.codeFormatter());
+            Console.WriteLine(iPhone.codeFormatter());
+            Console.WriteLine(shampoo.codeFormatter());
         }
 
         public static string Prettifier(string input) 

@@ -34,6 +34,7 @@ namespace csharp_oop_shop
         public Prodotto(string name, string description, double price, Iva iva)
         {
             this.code = Random.Shared.Next(1, 100000000);
+            // this.code = Random.Shared.Next(1, 10000); /* code formatter debugger */
             this.name = name;
             this.description = description;
             this.price = price;
@@ -42,6 +43,7 @@ namespace csharp_oop_shop
 
         public double getFullPrice() => this.price * (1 + (double)this.iva / 100);
         public string getExtendedName() => this.code.ToString() + " " + this.name;
+        public string codeFormatter() => this.code.ToString().PadLeft(8, '0');
     }
 
     public enum Iva
