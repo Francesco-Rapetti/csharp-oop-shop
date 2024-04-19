@@ -25,25 +25,30 @@ namespace csharp_oop_shop
 {
     internal class Prodotto
     {
-        private int code;
-        private string name { get; set; }
-        private string description { get; set; }
-        private double price { get; set; }
-        private Iva iva;
+        private int _code;
+        private string _name;
+        private string _description;
+        private double _price;
+        private Iva _iva;
+
+        public string getCode() => this._code.ToString().PadLeft(8, '0');
+        public string Name { get { return this._name; } set { this._name = value; } }
+        public string Description { get { return this._description; } set { this._description = value; } }
+        public double Price { get { return this._price; } set { this._price = Math.Abs(value); } }
+        public Iva Iva { get { return this._iva; } set { this._iva = value; } }
 
         public Prodotto(string name, string description, double price, Iva iva)
         {
-            this.code = Random.Shared.Next(1, 100000000);
+            this._code = Random.Shared.Next(1, 100000000);
             // this.code = Random.Shared.Next(1, 10000); /* code formatter debugger */
-            this.name = name;
-            this.description = description;
-            this.price = price;
-            this.iva = iva;
+            this._name = name;
+            this._description = description;
+            this._price = price;
+            this._iva = iva;
         }
 
-        public string getCode() => this.code.ToString().PadLeft(8, '0');
-        public double getFullPrice() => this.price * (1 + (double)this.iva / 100);
-        public string getExtendedName() => this.code.ToString() + " " + this.name;
+        public double getFullPrice() => this._price * (1 + (double)this._iva / 100);
+        public string getExtendedName() => this._code.ToString() + " " + this._name;
     }
 
     public enum Iva

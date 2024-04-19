@@ -36,6 +36,11 @@ namespace csharp_oop_shop
             Console.WriteLine(iPhone.getExtendedName());
             Console.WriteLine(shampoo.getExtendedName()+"\n");
 
+            Console.WriteLine(Prettifier("get price"));
+            Console.WriteLine(pane.Price);
+            Console.WriteLine(iPhone.Price);
+            Console.WriteLine(shampoo.Price + "\n");
+
             Console.WriteLine(Prettifier("get full price"));
             Console.WriteLine(pane.getFullPrice());
             Console.WriteLine(iPhone.getFullPrice());
