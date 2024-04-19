@@ -1,5 +1,4 @@
-﻿
-/*
+﻿/*
     creare la classe Prodotto che gestisce i prodotti dello shop.
     Un prodotto è caratterizzato da:
     - codice (numero intero)
@@ -32,9 +31,13 @@ namespace csharp_oop_shop
         private double price { get; set; }
         private Iva iva;
 
-        public Prodotto()
+        public Prodotto(string name, string description, double price, Iva iva)
         {
             this.code = Random.Shared.Next(1, 100000000);
+            this.name = name;
+            this.description = description;
+            this.price = price;
+            this.iva = iva;
         }
 
         public double getFullPrice() => this.price * (1 + (double)this.iva / 100);
