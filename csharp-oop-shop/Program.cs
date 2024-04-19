@@ -34,17 +34,23 @@ namespace csharp_oop_shop
             Console.WriteLine(Prettifier("get full name"));
             Console.WriteLine(pane.getExtendedName());
             Console.WriteLine(iPhone.getExtendedName());
-            Console.WriteLine(shampoo.getExtendedName());
+            Console.WriteLine(shampoo.getExtendedName()+"\n");
 
             Console.WriteLine(Prettifier("get full price"));
             Console.WriteLine(pane.getFullPrice());
             Console.WriteLine(iPhone.getFullPrice());
-            Console.WriteLine(shampoo.getFullPrice());
+            Console.WriteLine(shampoo.getFullPrice()+"\n");
 
             Console.WriteLine(Prettifier("code formatter"));
             Console.WriteLine(pane.codeFormatter());
             Console.WriteLine(iPhone.codeFormatter());
-            Console.WriteLine(shampoo.codeFormatter());
+            Console.WriteLine(shampoo.codeFormatter()+"\n");
+
+            // BONUS
+            Console.WriteLine(Prettifier("bonus"));
+            Prodotto[] products = { pane, iPhone, shampoo };
+            foreach (Prodotto product in products)
+                Console.WriteLine(product.getExtendedName());
         }
 
         public static string Prettifier(string input) 
