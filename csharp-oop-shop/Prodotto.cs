@@ -25,7 +25,7 @@ namespace csharp_oop_shop
 {
     internal class Prodotto
     {
-        private int code { get; }
+        private int code;
         private string name { get; set; }
         private string description { get; set; }
         private double price { get; set; }
@@ -41,9 +41,9 @@ namespace csharp_oop_shop
             this.iva = iva;
         }
 
+        public string getCode() => this.code.ToString().PadLeft(8, '0');
         public double getFullPrice() => this.price * (1 + (double)this.iva / 100);
         public string getExtendedName() => this.code.ToString() + " " + this.name;
-        public string codeFormatter() => this.code.ToString().PadLeft(8, '0');
     }
 
     public enum Iva
