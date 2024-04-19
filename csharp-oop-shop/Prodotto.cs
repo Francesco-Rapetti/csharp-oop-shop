@@ -40,7 +40,7 @@ namespace csharp_oop_shop
         public Prodotto(string name, string description, double price, Iva iva)
         {
             this._code = Random.Shared.Next(1, 100000000);
-            // this.code = Random.Shared.Next(1, 10000); /* code formatter debugger */
+            // this._code = Random.Shared.Next(1, 10000); /* code formatter debugger */
             this._name = name;
             this._description = description;
             this._price = price;
