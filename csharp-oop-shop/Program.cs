@@ -47,9 +47,9 @@ namespace csharp_oop_shop
             Console.WriteLine(shampoo.getFullPrice()+"\n");
 
             Console.WriteLine(Prettifier("code formatter"));
-            Console.WriteLine(pane.getCode());
-            Console.WriteLine(iPhone.getCode());
-            Console.WriteLine(shampoo.getCode()+"\n");
+            Console.WriteLine(pane.Code);
+            Console.WriteLine(iPhone.Code);
+            Console.WriteLine(shampoo.Code+"\n");
 
             // BONUS
             Console.WriteLine(Prettifier("bonus"));

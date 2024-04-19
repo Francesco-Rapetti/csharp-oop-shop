@@ -31,7 +31,7 @@ namespace csharp_oop_shop
         private double _price;
         private Iva _iva;
 
-        public string getCode() => this._code.ToString().PadLeft(8, '0');
+        public string Code => this._code.ToString().PadLeft(8, '0');
         public string Name { get { return this._name; } set { this._name = value; } }
         public string Description { get { return this._description; } set { this._description = value; } }
         public double Price { get { return this._price; } set { this._price = Math.Abs(value); } }
